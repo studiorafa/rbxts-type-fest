@@ -1,36 +1,46 @@
 {
-  "name": "@rbxts/rbxts-type-fest",
-  "version": "1.0.0",
-  "description": "",
-  "main": "out/init.lua",
+  "name": "@rbxts/type-fest",
+  "version": "5.10.0",
+  "packageManager": "npm@11.19.0",
+  "description": "Type-Fest utilities adapted and verified for roblox-ts",
   "scripts": {
-    "build": "rbxtsc",
-    "watch": "rbxtsc -w",
-    "prepublishOnly": "npm run build"
+    "sync": "tsx scripts/sync.ts",
+    "verify": "tsc -p tsconfig.tools.json && tsx --test tests/*.test.ts && tsx scripts/verify.ts",
+    "prepublishOnly": "npm run verify",
+    "release": "tsx scripts/release.ts",
+    "prepare:bootstrap": "tsx scripts/sync.ts --prepare-bootstrap"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
-  "types": "out/index.d.ts",
+  "types": "src/index.d.ts",
   "files": [
-    "out",
-    "!**/*.tsbuildinfo"
+    "src/**/*.d.ts",
+    "compatibility.json",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@rbxts/compiler-types": "^3.0.0-types.0",
-    "@rbxts/types": "^1.0.960",
-    "@typescript-eslint/eslint-plugin": "^8.72.1",
-    "@typescript-eslint/parser": "^8.72.1",
-    "eslint": "^10.14.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.7",
-    "eslint-plugin-roblox-ts": "^1.4.1",
-    "prettier": "^3.9.10",
-    "roblox-ts": "^3.0.0",
-    "typescript": "^5.9.3"
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "1.0.805",
+    "@types/node": "22.5.4",
+    "@types/semver": "7.7.1",
+    "roblox-ts": "3.0.0",
+    "semver": "7.7.3",
+    "tsx": "4.20.6",
+    "typescript": "5.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studiorafa/rbxts-type-fest"
+  },
+  "dependencies": {
+    "tagged-tag": "1.0.0"
   }
 }

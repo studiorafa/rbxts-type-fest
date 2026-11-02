@@ -2,3 +2,6 @@
 /out
 /include
 *.tsbuildinfo
+*.tgz
+/artifacts
+/.sync-backup-*

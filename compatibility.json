@@ -1,0 +1,2195 @@
+{
+  "upstream": {
+    "version": "5.10.0",
+    "integrity": "sha512-NoSdpq/WEiAg5sjmBkmV/hfxv6HJH4NqPNrqjtSO5CwRmpsDfaf4begxW34KdJykH/l1yHtwBWQkCRdoXO8mPA=="
+  },
+  "toolchain": {
+    "roblox-ts": "3.0.0",
+    "typescript": "5.5.3",
+    "@rbxts/compiler-types": "3.0.0-types.0",
+    "@rbxts/types": "1.0.805"
+  },
+  "exports": [
+    {
+      "name": "Absolute",
+      "exportedName": "Absolute",
+      "status": "supported",
+      "source": "source/absolute.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AbstractClass",
+      "exportedName": "AbstractClass",
+      "status": "supported",
+      "source": "source/basic.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AbstractConstructor",
+      "exportedName": "AbstractConstructor",
+      "status": "supported",
+      "source": "source/basic.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AllExtend",
+      "exportedName": "AllExtend",
+      "status": "supported",
+      "source": "source/all-extend.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AllExtendOptions",
+      "exportedName": "AllExtendOptions",
+      "status": "supported",
+      "source": "source/all-extend.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AllUnionFields",
+      "exportedName": "AllUnionFields",
+      "status": "omitted",
+      "source": "source/all-union-fields.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "AllUnionFields",
+        "source/all-union-fields.d.ts#AllUnionFields",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "Alphanumeric",
+      "exportedName": "Alphanumeric",
+      "status": "supported",
+      "source": "source/characters.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "And",
+      "exportedName": "And",
+      "status": "supported",
+      "source": "source/and.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AndAll",
+      "exportedName": "AndAll",
+      "status": "supported",
+      "source": "source/and-all.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Arrayable",
+      "exportedName": "Arrayable",
+      "status": "supported",
+      "source": "source/arrayable.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ArrayElement",
+      "exportedName": "ArrayElement",
+      "status": "supported",
+      "source": "source/array-element.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ArrayIndices",
+      "exportedName": "ArrayIndices",
+      "status": "omitted",
+      "source": "source/array-indices.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'Partial<Element>'.",
+      "dependencyTrace": [
+        "ArrayIndices",
+        "source/array-indices.d.ts#ArrayIndices"
+      ]
+    },
+    {
+      "name": "ArrayLength",
+      "exportedName": "ArrayLength",
+      "status": "omitted",
+      "source": "source/array-length.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'T'.",
+      "dependencyTrace": [
+        "ArrayLength",
+        "source/array-length.d.ts#ArrayLength"
+      ]
+    },
+    {
+      "name": "ArrayReverse",
+      "exportedName": "ArrayReverse",
+      "status": "supported",
+      "source": "source/array-reverse.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ArraySlice",
+      "exportedName": "ArraySlice",
+      "status": "omitted",
+      "source": "source/array-slice.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'Array_[\"length\"]' does not satisfy the constraint 'number'.",
+      "dependencyTrace": [
+        "ArraySlice",
+        "source/array-slice.d.ts#ArraySlice",
+        "source/array-slice.d.ts#_ArraySlice"
+      ]
+    },
+    {
+      "name": "ArraySplice",
+      "exportedName": "ArraySplice",
+      "status": "omitted",
+      "source": "source/array-splice.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'T'.",
+      "dependencyTrace": [
+        "ArraySplice",
+        "source/array-splice.d.ts#ArraySplice",
+        "source/array-splice.d.ts#SplitArrayByIndex"
+      ]
+    },
+    {
+      "name": "ArrayTail",
+      "exportedName": "ArrayTail",
+      "status": "supported",
+      "source": "source/array-tail.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ArrayValues",
+      "exportedName": "ArrayValues",
+      "status": "supported",
+      "source": "source/array-values.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Asyncify",
+      "exportedName": "Asyncify",
+      "status": "supported",
+      "source": "source/asyncify.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "AsyncReturnType",
+      "exportedName": "AsyncReturnType",
+      "status": "supported",
+      "source": "source/async-return-type.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "CamelCase",
+      "exportedName": "CamelCase",
+      "status": "supported",
+      "source": "source/camel-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "CamelCasedProperties",
+      "exportedName": "CamelCasedProperties",
+      "status": "supported",
+      "source": "source/camel-cased-properties.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "CamelCasedPropertiesDeep",
+      "exportedName": "CamelCasedPropertiesDeep",
+      "status": "omitted",
+      "source": "source/camel-cased-properties-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "CamelCasedPropertiesDeep",
+        "source/camel-cased-properties-deep.d.ts#CamelCasedPropertiesDeep",
+        "source/camel-cased-properties-deep.d.ts#_CamelCasedPropertiesDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "CamelCaseOptions",
+      "exportedName": "CamelCaseOptions",
+      "status": "supported",
+      "source": "source/camel-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Class",
+      "exportedName": "Class",
+      "status": "supported",
+      "source": "source/basic.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ConditionalExcept",
+      "exportedName": "ConditionalExcept",
+      "status": "omitted",
+      "source": "source/conditional-except.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TArray'.",
+      "dependencyTrace": [
+        "ConditionalExcept",
+        "source/conditional-except.d.ts#ConditionalExcept",
+        "source/conditional-keys.d.ts#ConditionalKeys",
+        "source/tuple-to-object.d.ts#TupleToObject",
+        "source/is-tuple.d.ts#IsTuple",
+        "source/is-tuple.d.ts#_IsTuple"
+      ]
+    },
+    {
+      "name": "ConditionalKeys",
+      "exportedName": "ConditionalKeys",
+      "status": "omitted",
+      "source": "source/conditional-keys.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TArray'.",
+      "dependencyTrace": [
+        "ConditionalKeys",
+        "source/conditional-keys.d.ts#ConditionalKeys",
+        "source/tuple-to-object.d.ts#TupleToObject",
+        "source/is-tuple.d.ts#IsTuple",
+        "source/is-tuple.d.ts#_IsTuple"
+      ]
+    },
+    {
+      "name": "ConditionalPick",
+      "exportedName": "ConditionalPick",
+      "status": "omitted",
+      "source": "source/conditional-pick.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TArray'.",
+      "dependencyTrace": [
+        "ConditionalPick",
+        "source/conditional-pick.d.ts#ConditionalPick",
+        "source/conditional-keys.d.ts#ConditionalKeys",
+        "source/tuple-to-object.d.ts#TupleToObject",
+        "source/is-tuple.d.ts#IsTuple",
+        "source/is-tuple.d.ts#_IsTuple"
+      ]
+    },
+    {
+      "name": "ConditionalPickDeep",
+      "exportedName": "ConditionalPickDeep",
+      "status": "omitted",
+      "source": "source/conditional-pick-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TArray'.",
+      "dependencyTrace": [
+        "ConditionalPickDeep",
+        "source/conditional-pick-deep.d.ts#ConditionalPickDeep",
+        "source/conditional-pick-deep.d.ts#_ConditionalPickDeep",
+        "source/conditional-except.d.ts#ConditionalExcept",
+        "source/conditional-keys.d.ts#ConditionalKeys",
+        "source/tuple-to-object.d.ts#TupleToObject",
+        "source/is-tuple.d.ts#IsTuple",
+        "source/is-tuple.d.ts#_IsTuple"
+      ]
+    },
+    {
+      "name": "ConditionalPickDeepOptions",
+      "exportedName": "ConditionalPickDeepOptions",
+      "status": "supported",
+      "source": "source/conditional-pick-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ConditionalSimplify",
+      "exportedName": "ConditionalSimplify",
+      "status": "supported",
+      "source": "source/conditional-simplify.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ConditionalSimplifyDeep",
+      "exportedName": "ConditionalSimplifyDeep",
+      "status": "supported",
+      "source": "source/conditional-simplify-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Constructor",
+      "exportedName": "Constructor",
+      "status": "supported",
+      "source": "source/basic.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "DelimiterCase",
+      "exportedName": "DelimiterCase",
+      "status": "supported",
+      "source": "source/delimiter-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "DelimiterCasedProperties",
+      "exportedName": "DelimiterCasedProperties",
+      "status": "supported",
+      "source": "source/delimiter-cased-properties.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "DelimiterCasedPropertiesDeep",
+      "exportedName": "DelimiterCasedPropertiesDeep",
+      "status": "omitted",
+      "source": "source/delimiter-cased-properties-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "DelimiterCasedPropertiesDeep",
+        "source/delimiter-cased-properties-deep.d.ts#DelimiterCasedPropertiesDeep",
+        "source/delimiter-cased-properties-deep.d.ts#_DelimiterCasedPropertiesDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "DigitCharacter",
+      "exportedName": "DigitCharacter",
+      "status": "supported",
+      "source": "source/characters.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "DistributedOmit",
+      "exportedName": "DistributedOmit",
+      "status": "omitted",
+      "source": "source/distributed-omit.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'KeyType' does not satisfy the constraint 'keyof ObjectType'.   Type 'keyof UnionToIntersection<ObjectType extends unknown ? Record<keyof ObjectType, never> : never>' is not assignable to type 'keyof ObjectType'.     Type 'string | number | symbol' is not assignable to type 'keyof ObjectType'.       Type 'string' is not assignable to type 'keyof ObjectType'.",
+      "dependencyTrace": [
+        "DistributedOmit",
+        "source/distributed-omit.d.ts#DistributedOmit"
+      ]
+    },
+    {
+      "name": "DistributedPick",
+      "exportedName": "DistributedPick",
+      "status": "supported",
+      "source": "source/distributed-pick.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "EmptyObject",
+      "exportedName": "EmptyObject",
+      "status": "supported",
+      "source": "source/empty-object.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Entries",
+      "exportedName": "Entries",
+      "status": "supported",
+      "source": "source/entries.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Entry",
+      "exportedName": "Entry",
+      "status": "supported",
+      "source": "source/entry.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Exact",
+      "exportedName": "Exact",
+      "status": "supported",
+      "source": "source/exact.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Except",
+      "exportedName": "Except",
+      "status": "supported",
+      "source": "source/except.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExceptOptions",
+      "exportedName": "ExceptOptions",
+      "status": "supported",
+      "source": "source/except.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExcludeExactly",
+      "exportedName": "ExcludeExactly",
+      "status": "supported",
+      "source": "source/exclude-exactly.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExcludeRestElement",
+      "exportedName": "ExcludeRestElement",
+      "status": "supported",
+      "source": "source/exclude-rest-element.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExcludeStrict",
+      "exportedName": "ExcludeStrict",
+      "status": "supported",
+      "source": "source/exclude-strict.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExclusifyUnion",
+      "exportedName": "ExclusifyUnion",
+      "status": "omitted",
+      "source": "source/exclusify-union.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "ExclusifyUnion",
+        "source/exclusify-union.d.ts#ExclusifyUnion",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "ExtendsStrict",
+      "exportedName": "ExtendsStrict",
+      "status": "supported",
+      "source": "source/extends-strict.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExtendsStrictOptions",
+      "exportedName": "ExtendsStrictOptions",
+      "status": "supported",
+      "source": "source/extends-strict.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExtractExactly",
+      "exportedName": "ExtractExactly",
+      "status": "supported",
+      "source": "source/extract-exactly.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExtractRestElement",
+      "exportedName": "ExtractRestElement",
+      "status": "supported",
+      "source": "source/extract-rest-element.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ExtractStrict",
+      "exportedName": "ExtractStrict",
+      "status": "supported",
+      "source": "source/extract-strict.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "FindGlobalInstanceType",
+      "exportedName": "FindGlobalInstanceType",
+      "status": "supported",
+      "source": "source/find-global-type.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "FindGlobalType",
+      "exportedName": "FindGlobalType",
+      "status": "supported",
+      "source": "source/find-global-type.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Finite",
+      "exportedName": "Finite",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "FixedLengthArray",
+      "exportedName": "FixedLengthArray",
+      "status": "omitted",
+      "source": "source/fixed-length-array.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'number | \"length\" | ArrayLengthMutationKeys' does not satisfy the constraint 'keyof TupleOf<Length, Element>'.   Type 'string' is not assignable to type 'keyof TupleOf<Length, Element>'.     Type '\"length\"' is not assignable to type '(number | unique symbol | \"push\" | \"pop\" | \"shift\" | \"unshift\" | \"insert\" | \"remove\" | \"unorderedRemove\" | \"sort\" | \"clear\" | \"isEmpty\" | \"join\" | \"move\" | \"includes\" | \"indexOf\" | ... 11 more ... | \"size\") & keyof (IsNever<...> extends true ? [] : _TupleOf<...>)'.",
+      "dependencyTrace": [
+        "FixedLengthArray",
+        "source/fixed-length-array.d.ts#FixedLengthArray"
+      ]
+    },
+    {
+      "name": "Float",
+      "exportedName": "Float",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Get",
+      "exportedName": "Get",
+      "status": "omitted",
+      "source": "source/get.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "Get",
+        "source/get.d.ts#Get",
+        "source/paths.d.ts#Paths",
+        "source/paths.d.ts#_Paths",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "GetOptions",
+      "exportedName": "GetOptions",
+      "status": "supported",
+      "source": "source/get.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "GetTagMetadata",
+      "exportedName": "GetTagMetadata",
+      "status": "adapted",
+      "source": "source/tagged.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "GlobalThis",
+      "exportedName": "GlobalThis",
+      "status": "supported",
+      "source": "source/global-this.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "GreaterThan",
+      "exportedName": "GreaterThan",
+      "status": "omitted",
+      "source": "source/greater-than.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'StringLength<A>' does not satisfy the constraint 'number'.   Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "GreaterThan",
+        "source/greater-than.d.ts#GreaterThan",
+        "source/internal/string.d.ts#PositiveNumericStringGt"
+      ]
+    },
+    {
+      "name": "GreaterThanOrEqual",
+      "exportedName": "GreaterThanOrEqual",
+      "status": "omitted",
+      "source": "source/greater-than-or-equal.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'StringLength<A>' does not satisfy the constraint 'number'.   Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "GreaterThanOrEqual",
+        "source/greater-than-or-equal.d.ts#GreaterThanOrEqual",
+        "source/greater-than.d.ts#GreaterThan",
+        "source/internal/string.d.ts#PositiveNumericStringGt"
+      ]
+    },
+    {
+      "name": "HasOptionalKeys",
+      "exportedName": "HasOptionalKeys",
+      "status": "supported",
+      "source": "source/has-optional-keys.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "HasReadonlyKeys",
+      "exportedName": "HasReadonlyKeys",
+      "status": "supported",
+      "source": "source/has-readonly-keys.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "HasRequiredKeys",
+      "exportedName": "HasRequiredKeys",
+      "status": "supported",
+      "source": "source/has-required-keys.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "HasWritableKeys",
+      "exportedName": "HasWritableKeys",
+      "status": "supported",
+      "source": "source/has-writable-keys.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "If",
+      "exportedName": "If",
+      "status": "supported",
+      "source": "source/if.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IfAny",
+      "exportedName": "IfAny",
+      "status": "supported",
+      "source": "source/if-any.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IfEmptyObject",
+      "exportedName": "IfEmptyObject",
+      "status": "supported",
+      "source": "source/if-empty-object.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IfNever",
+      "exportedName": "IfNever",
+      "status": "supported",
+      "source": "source/if-never.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IfNull",
+      "exportedName": "IfNull",
+      "status": "supported",
+      "source": "source/if-null.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IfUnknown",
+      "exportedName": "IfUnknown",
+      "status": "supported",
+      "source": "source/if-unknown.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Includes",
+      "exportedName": "Includes",
+      "status": "supported",
+      "source": "source/includes.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IntClosedRange",
+      "exportedName": "IntClosedRange",
+      "status": "omitted",
+      "source": "source/int-closed-range.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'Magnitude[\"length\"]' does not satisfy the constraint 'number'.",
+      "dependencyTrace": [
+        "IntClosedRange",
+        "source/int-closed-range.d.ts#IntClosedRange",
+        "source/int-range.d.ts#IntRange",
+        "source/int-range.d.ts#PrivateNegativeIntRange"
+      ]
+    },
+    {
+      "name": "Integer",
+      "exportedName": "Integer",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IntRange",
+      "exportedName": "IntRange",
+      "status": "omitted",
+      "source": "source/int-range.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'Magnitude[\"length\"]' does not satisfy the constraint 'number'.",
+      "dependencyTrace": [
+        "IntRange",
+        "source/int-range.d.ts#IntRange",
+        "source/int-range.d.ts#PrivateNegativeIntRange"
+      ]
+    },
+    {
+      "name": "InvariantOf",
+      "exportedName": "InvariantOf",
+      "status": "supported",
+      "source": "source/invariant-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsAny",
+      "exportedName": "IsAny",
+      "status": "supported",
+      "source": "source/is-any.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsBooleanLiteral",
+      "exportedName": "IsBooleanLiteral",
+      "status": "supported",
+      "source": "source/is-boolean-literal.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsEmptyObject",
+      "exportedName": "IsEmptyObject",
+      "status": "supported",
+      "source": "source/empty-object.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsEqual",
+      "exportedName": "IsEqual",
+      "status": "supported",
+      "source": "source/is-equal.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsFloat",
+      "exportedName": "IsFloat",
+      "status": "supported",
+      "source": "source/is-float.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsInteger",
+      "exportedName": "IsInteger",
+      "status": "supported",
+      "source": "source/is-integer.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsLiteral",
+      "exportedName": "IsLiteral",
+      "status": "supported",
+      "source": "source/is-literal.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsLowercase",
+      "exportedName": "IsLowercase",
+      "status": "supported",
+      "source": "source/is-lowercase.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsNegative",
+      "exportedName": "IsNegative",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsNever",
+      "exportedName": "IsNever",
+      "status": "supported",
+      "source": "source/is-never.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsNull",
+      "exportedName": "IsNull",
+      "status": "supported",
+      "source": "source/is-null.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsNullable",
+      "exportedName": "IsNullable",
+      "status": "supported",
+      "source": "source/is-nullable.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsNumericLiteral",
+      "exportedName": "IsNumericLiteral",
+      "status": "supported",
+      "source": "source/is-numeric-literal.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsOptional",
+      "exportedName": "IsOptional",
+      "status": "supported",
+      "source": "source/is-optional.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsOptionalKeyOf",
+      "exportedName": "IsOptionalKeyOf",
+      "status": "supported",
+      "source": "source/is-optional-key-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsReadonlyKeyOf",
+      "exportedName": "IsReadonlyKeyOf",
+      "status": "supported",
+      "source": "source/is-readonly-key-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsRequiredKeyOf",
+      "exportedName": "IsRequiredKeyOf",
+      "status": "supported",
+      "source": "source/is-required-key-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsStringLiteral",
+      "exportedName": "IsStringLiteral",
+      "status": "supported",
+      "source": "source/is-string-literal.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsSymbolLiteral",
+      "exportedName": "IsSymbolLiteral",
+      "status": "supported",
+      "source": "source/is-symbol-literal.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsTuple",
+      "exportedName": "IsTuple",
+      "status": "omitted",
+      "source": "source/is-tuple.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TArray'.",
+      "dependencyTrace": [
+        "IsTuple",
+        "source/is-tuple.d.ts#IsTuple",
+        "source/is-tuple.d.ts#_IsTuple"
+      ]
+    },
+    {
+      "name": "IsTupleOptions",
+      "exportedName": "IsTupleOptions",
+      "status": "supported",
+      "source": "source/is-tuple.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsUndefined",
+      "exportedName": "IsUndefined",
+      "status": "supported",
+      "source": "source/is-undefined.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsUnion",
+      "exportedName": "IsUnion",
+      "status": "supported",
+      "source": "source/is-union.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsUnknown",
+      "exportedName": "IsUnknown",
+      "status": "supported",
+      "source": "source/is-unknown.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsUppercase",
+      "exportedName": "IsUppercase",
+      "status": "supported",
+      "source": "source/is-uppercase.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IsWritableKeyOf",
+      "exportedName": "IsWritableKeyOf",
+      "status": "supported",
+      "source": "source/is-writable-key-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "IterableElement",
+      "exportedName": "IterableElement",
+      "status": "supported",
+      "source": "source/iterable-element.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Join",
+      "exportedName": "Join",
+      "status": "supported",
+      "source": "source/join.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "JsonArray",
+      "exportedName": "JsonArray",
+      "status": "supported",
+      "source": "source/json-value.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Jsonifiable",
+      "exportedName": "Jsonifiable",
+      "status": "supported",
+      "source": "source/jsonifiable.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Jsonify",
+      "exportedName": "Jsonify",
+      "status": "omitted",
+      "source": "source/jsonify.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Int8Array'.",
+      "dependencyTrace": [
+        "Jsonify",
+        "source/jsonify.d.ts#Jsonify",
+        "source/typed-array.d.ts#TypedArray"
+      ]
+    },
+    {
+      "name": "JsonObject",
+      "exportedName": "JsonObject",
+      "status": "supported",
+      "source": "source/json-value.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "JsonPrimitive",
+      "exportedName": "JsonPrimitive",
+      "status": "supported",
+      "source": "source/json-value.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "JsonValue",
+      "exportedName": "JsonValue",
+      "status": "supported",
+      "source": "source/json-value.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "KebabCase",
+      "exportedName": "KebabCase",
+      "status": "supported",
+      "source": "source/kebab-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "KebabCasedProperties",
+      "exportedName": "KebabCasedProperties",
+      "status": "supported",
+      "source": "source/kebab-cased-properties.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "KebabCasedPropertiesDeep",
+      "exportedName": "KebabCasedPropertiesDeep",
+      "status": "omitted",
+      "source": "source/kebab-cased-properties-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "KebabCasedPropertiesDeep",
+        "source/kebab-cased-properties-deep.d.ts#KebabCasedPropertiesDeep",
+        "source/delimiter-cased-properties-deep.d.ts#DelimiterCasedPropertiesDeep",
+        "source/delimiter-cased-properties-deep.d.ts#_DelimiterCasedPropertiesDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "KeyAsString",
+      "exportedName": "KeyAsString",
+      "status": "supported",
+      "source": "source/key-as-string.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "KeysOfUnion",
+      "exportedName": "KeysOfUnion",
+      "status": "supported",
+      "source": "source/keys-of-union.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "LastArrayElement",
+      "exportedName": "LastArrayElement",
+      "status": "supported",
+      "source": "source/last-array-element.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "LessThan",
+      "exportedName": "LessThan",
+      "status": "omitted",
+      "source": "source/less-than.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'StringLength<A>' does not satisfy the constraint 'number'.   Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "LessThan",
+        "source/less-than.d.ts#LessThan",
+        "source/greater-than-or-equal.d.ts#GreaterThanOrEqual",
+        "source/greater-than.d.ts#GreaterThan",
+        "source/internal/string.d.ts#PositiveNumericStringGt"
+      ]
+    },
+    {
+      "name": "LessThanOrEqual",
+      "exportedName": "LessThanOrEqual",
+      "status": "omitted",
+      "source": "source/less-than-or-equal.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'StringLength<A>' does not satisfy the constraint 'number'.   Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "LessThanOrEqual",
+        "source/less-than-or-equal.d.ts#LessThanOrEqual",
+        "source/greater-than.d.ts#GreaterThan",
+        "source/internal/string.d.ts#PositiveNumericStringGt"
+      ]
+    },
+    {
+      "name": "LiteralToPrimitive",
+      "exportedName": "LiteralToPrimitive",
+      "status": "supported",
+      "source": "source/literal-to-primitive.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "LiteralToPrimitiveDeep",
+      "exportedName": "LiteralToPrimitiveDeep",
+      "status": "supported",
+      "source": "source/literal-to-primitive-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "LiteralUnion",
+      "exportedName": "LiteralUnion",
+      "status": "supported",
+      "source": "source/literal-union.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "LowercaseLetter",
+      "exportedName": "LowercaseLetter",
+      "status": "supported",
+      "source": "source/characters.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Merge",
+      "exportedName": "Merge",
+      "status": "supported",
+      "source": "source/merge.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "MergeDeep",
+      "exportedName": "MergeDeep",
+      "status": "omitted",
+      "source": "source/merge-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "MergeDeep",
+        "source/merge-deep.d.ts#MergeDeep",
+        "source/merge-deep.d.ts#MergeDeepWithDefaultOptions",
+        "source/merge-deep.d.ts#SimplifyDeepExcludeArray",
+        "source/simplify-deep.d.ts#SimplifyDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "MergeDeepOptions",
+      "exportedName": "MergeDeepOptions",
+      "status": "supported",
+      "source": "source/merge-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "MergeExclusive",
+      "exportedName": "MergeExclusive",
+      "status": "supported",
+      "source": "source/merge-exclusive.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "MultidimensionalArray",
+      "exportedName": "MultidimensionalArray",
+      "status": "omitted",
+      "source": "source/multidimensional-array.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'Subtract<Dimensions, 1>' does not satisfy the constraint 'number'.   Type '1 | Dimensions | (Dimensions extends never ? number : Dimensions extends -Infinity ? -Infinity : Dimensions extends Infinity ? Infinity : Dimensions extends 1 ? 0 : Dimensions extends 0 ? -1 : SubtractPostChecks<...>)' is not assignable to type 'number'.     Type 'Dimensions extends never ? number : Dimensions extends -Infinity ? -Infinity : Dimensions extends Infinity ? Infinity : Dimensions extends 1 ? 0 : Dimensions extends 0 ? -1 : SubtractPostChecks<...>' is not assignable to type 'number'.       Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "MultidimensionalArray",
+        "source/multidimensional-array.d.ts#MultidimensionalArray"
+      ]
+    },
+    {
+      "name": "MultidimensionalReadonlyArray",
+      "exportedName": "MultidimensionalReadonlyArray",
+      "status": "omitted",
+      "source": "source/multidimensional-readonly-array.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'Subtract<Dimensions, 1>' does not satisfy the constraint 'number'.   Type '1 | Dimensions | (Dimensions extends never ? number : Dimensions extends -Infinity ? -Infinity : Dimensions extends Infinity ? Infinity : Dimensions extends 1 ? 0 : Dimensions extends 0 ? -1 : SubtractPostChecks<...>)' is not assignable to type 'number'.     Type 'Dimensions extends never ? number : Dimensions extends -Infinity ? -Infinity : Dimensions extends Infinity ? Infinity : Dimensions extends 1 ? 0 : Dimensions extends 0 ? -1 : SubtractPostChecks<...>' is not assignable to type 'number'.       Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "MultidimensionalReadonlyArray",
+        "source/multidimensional-readonly-array.d.ts#MultidimensionalReadonlyArray"
+      ]
+    },
+    {
+      "name": "Negative",
+      "exportedName": "Negative",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NegativeFloat",
+      "exportedName": "NegativeFloat",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NegativeInfinity",
+      "exportedName": "NegativeInfinity",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NegativeInteger",
+      "exportedName": "NegativeInteger",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NonEmptyObject",
+      "exportedName": "NonEmptyObject",
+      "status": "supported",
+      "source": "source/non-empty-object.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NonEmptyString",
+      "exportedName": "NonEmptyString",
+      "status": "supported",
+      "source": "source/non-empty-string.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NonEmptyTuple",
+      "exportedName": "NonEmptyTuple",
+      "status": "supported",
+      "source": "source/non-empty-tuple.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NonNegative",
+      "exportedName": "NonNegative",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NonNegativeInteger",
+      "exportedName": "NonNegativeInteger",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "NonNullableDeep",
+      "exportedName": "NonNullableDeep",
+      "status": "omitted",
+      "source": "source/non-nullable-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "NonNullableDeep",
+        "source/non-nullable-deep.d.ts#NonNullableDeep",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "ObjectMerge",
+      "exportedName": "ObjectMerge",
+      "status": "omitted",
+      "source": "source/object-merge.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'WeakKey'.",
+      "dependencyTrace": [
+        "ObjectMerge",
+        "source/object-merge.d.ts#ObjectMerge",
+        "source/internal/type.d.ts#MapsSetsOrArrays"
+      ]
+    },
+    {
+      "name": "OmitDeep",
+      "exportedName": "OmitDeep",
+      "status": "omitted",
+      "source": "source/omit-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "OmitDeep",
+        "source/omit-deep.d.ts#OmitDeep",
+        "source/paths.d.ts#Paths",
+        "source/paths.d.ts#_Paths",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "OmitIndexSignature",
+      "exportedName": "OmitIndexSignature",
+      "status": "supported",
+      "source": "source/omit-index-signature.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Opaque",
+      "exportedName": "Opaque",
+      "status": "supported",
+      "source": "source/tagged.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Optional",
+      "exportedName": "Optional",
+      "status": "supported",
+      "source": "source/optional.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "OptionalKeysOf",
+      "exportedName": "OptionalKeysOf",
+      "status": "supported",
+      "source": "source/optional-keys-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Or",
+      "exportedName": "Or",
+      "status": "supported",
+      "source": "source/or.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "OrAll",
+      "exportedName": "OrAll",
+      "status": "supported",
+      "source": "source/or-all.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "OverrideProperties",
+      "exportedName": "OverrideProperties",
+      "status": "supported",
+      "source": "source/override-properties.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PackageJson",
+      "exportedName": "PackageJson",
+      "status": "supported",
+      "source": "source/package-json.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PartialDeep",
+      "exportedName": "PartialDeep",
+      "status": "omitted",
+      "source": "source/partial-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "PartialDeep",
+        "source/partial-deep.d.ts#PartialDeep",
+        "source/partial-deep.d.ts#_PartialDeep",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "PartialDeepOptions",
+      "exportedName": "PartialDeepOptions",
+      "status": "supported",
+      "source": "source/partial-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PartialOnUndefinedDeep",
+      "exportedName": "PartialOnUndefinedDeep",
+      "status": "omitted",
+      "source": "source/partial-on-undefined-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "PartialOnUndefinedDeep",
+        "source/partial-on-undefined-deep.d.ts#PartialOnUndefinedDeep",
+        "source/partial-on-undefined-deep.d.ts#_PartialOnUndefinedDeep",
+        "source/partial-on-undefined-deep.d.ts#PartialOnUndefinedDeepValue",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "PartialOnUndefinedDeepOptions",
+      "exportedName": "PartialOnUndefinedDeepOptions",
+      "status": "supported",
+      "source": "source/partial-on-undefined-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PascalCase",
+      "exportedName": "PascalCase",
+      "status": "supported",
+      "source": "source/pascal-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PascalCasedProperties",
+      "exportedName": "PascalCasedProperties",
+      "status": "supported",
+      "source": "source/pascal-cased-properties.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PascalCasedPropertiesDeep",
+      "exportedName": "PascalCasedPropertiesDeep",
+      "status": "omitted",
+      "source": "source/pascal-cased-properties-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "PascalCasedPropertiesDeep",
+        "source/pascal-cased-properties-deep.d.ts#PascalCasedPropertiesDeep",
+        "source/pascal-cased-properties-deep.d.ts#_PascalCasedPropertiesDeep"
+      ]
+    },
+    {
+      "name": "Paths",
+      "exportedName": "Paths",
+      "status": "omitted",
+      "source": "source/paths.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "Paths",
+        "source/paths.d.ts#Paths",
+        "source/paths.d.ts#_Paths",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "PathsOptions",
+      "exportedName": "PathsOptions",
+      "status": "supported",
+      "source": "source/paths.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PickDeep",
+      "exportedName": "PickDeep",
+      "status": "omitted",
+      "source": "source/pick-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "PickDeep",
+        "source/pick-deep.d.ts#PickDeep",
+        "source/paths.d.ts#Paths",
+        "source/paths.d.ts#_Paths",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "PickIndexSignature",
+      "exportedName": "PickIndexSignature",
+      "status": "supported",
+      "source": "source/pick-index-signature.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "PositiveInfinity",
+      "exportedName": "PositiveInfinity",
+      "status": "supported",
+      "source": "source/numeric.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Primitive",
+      "exportedName": "Primitive",
+      "status": "supported",
+      "source": "source/primitive.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Promisable",
+      "exportedName": "Promisable",
+      "status": "supported",
+      "source": "source/promisable.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ReadonlyDeep",
+      "exportedName": "ReadonlyDeep",
+      "status": "omitted",
+      "source": "source/readonly-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "ReadonlyDeep",
+        "source/readonly-deep.d.ts#ReadonlyDeep",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "ReadonlyKeysOf",
+      "exportedName": "ReadonlyKeysOf",
+      "status": "supported",
+      "source": "source/readonly-keys-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ReadonlyTuple",
+      "exportedName": "ReadonlyTuple",
+      "status": "supported",
+      "source": "source/readonly-tuple.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RemovePrefix",
+      "exportedName": "RemovePrefix",
+      "status": "supported",
+      "source": "source/remove-prefix.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RemovePrefixOptions",
+      "exportedName": "RemovePrefixOptions",
+      "status": "supported",
+      "source": "source/remove-prefix.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RemoveSuffix",
+      "exportedName": "RemoveSuffix",
+      "status": "supported",
+      "source": "source/remove-suffix.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RemoveSuffixOptions",
+      "exportedName": "RemoveSuffixOptions",
+      "status": "supported",
+      "source": "source/remove-suffix.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RenameKeys",
+      "exportedName": "RenameKeys",
+      "status": "omitted",
+      "source": "source/rename-keys.d.ts",
+      "adaptations": [],
+      "reason": "TS2322: Type 'Counter[\"length\"]' is not assignable to type 'string | number | bigint | boolean | null | undefined'.",
+      "dependencyTrace": [
+        "RenameKeys",
+        "source/rename-keys.d.ts#RenameKeys",
+        "source/rename-keys.d.ts#RenameOnce",
+        "source/rename-keys.d.ts#ApplyRequired",
+        "source/set-required.d.ts#SetRequired",
+        "source/set-required.d.ts#_SetRequired",
+        "source/set-required.d.ts#SetArrayRequired"
+      ]
+    },
+    {
+      "name": "Replace",
+      "exportedName": "Replace",
+      "status": "supported",
+      "source": "source/replace.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ReplaceOptions",
+      "exportedName": "ReplaceOptions",
+      "status": "supported",
+      "source": "source/replace.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RequireAllOrNone",
+      "exportedName": "RequireAllOrNone",
+      "status": "adapted",
+      "source": "source/require-all-or-none.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "RequireAtLeastOne",
+      "exportedName": "RequireAtLeastOne",
+      "status": "supported",
+      "source": "source/require-at-least-one.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RequiredDeep",
+      "exportedName": "RequiredDeep",
+      "status": "omitted",
+      "source": "source/required-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "RequiredDeep",
+        "source/required-deep.d.ts#RequiredDeep",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "RequiredKeysOf",
+      "exportedName": "RequiredKeysOf",
+      "status": "supported",
+      "source": "source/required-keys-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RequireExactlyOne",
+      "exportedName": "RequireExactlyOne",
+      "status": "supported",
+      "source": "source/require-exactly-one.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "RequireOneOrNone",
+      "exportedName": "RequireOneOrNone",
+      "status": "adapted",
+      "source": "source/require-one-or-none.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "Schema",
+      "exportedName": "Schema",
+      "status": "omitted",
+      "source": "source/schema.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "Schema",
+        "source/schema.d.ts#Schema",
+        "source/schema.d.ts#_Schema",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SchemaOptions",
+      "exportedName": "SchemaOptions",
+      "status": "supported",
+      "source": "source/schema.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ScreamingSnakeCase",
+      "exportedName": "ScreamingSnakeCase",
+      "status": "supported",
+      "source": "source/screaming-snake-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SetFieldType",
+      "exportedName": "SetFieldType",
+      "status": "supported",
+      "source": "source/set-field-type.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SetFieldTypeOptions",
+      "exportedName": "SetFieldTypeOptions",
+      "status": "supported",
+      "source": "source/set-field-type.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SetNonNullable",
+      "exportedName": "SetNonNullable",
+      "status": "supported",
+      "source": "source/set-non-nullable.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SetNonNullableDeep",
+      "exportedName": "SetNonNullableDeep",
+      "status": "omitted",
+      "source": "source/set-non-nullable-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "SetNonNullableDeep",
+        "source/set-non-nullable-deep.d.ts#SetNonNullableDeep",
+        "source/paths.d.ts#Paths",
+        "source/paths.d.ts#_Paths",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SetOptional",
+      "exportedName": "SetOptional",
+      "status": "supported",
+      "source": "source/set-optional.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SetParameterType",
+      "exportedName": "SetParameterType",
+      "status": "omitted",
+      "source": "source/set-parameter-type.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TObject'.",
+      "dependencyTrace": [
+        "SetParameterType",
+        "source/set-parameter-type.d.ts#SetParameterType",
+        "source/set-parameter-type.d.ts#MergeObjectToArray"
+      ]
+    },
+    {
+      "name": "SetReadonly",
+      "exportedName": "SetReadonly",
+      "status": "supported",
+      "source": "source/set-readonly.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SetRequired",
+      "exportedName": "SetRequired",
+      "status": "omitted",
+      "source": "source/set-required.d.ts",
+      "adaptations": [],
+      "reason": "TS2322: Type 'Counter[\"length\"]' is not assignable to type 'string | number | bigint | boolean | null | undefined'.",
+      "dependencyTrace": [
+        "SetRequired",
+        "source/set-required.d.ts#SetRequired",
+        "source/set-required.d.ts#_SetRequired",
+        "source/set-required.d.ts#SetArrayRequired"
+      ]
+    },
+    {
+      "name": "SetRequiredDeep",
+      "exportedName": "SetRequiredDeep",
+      "status": "omitted",
+      "source": "source/set-required-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "SetRequiredDeep",
+        "source/set-required-deep.d.ts#SetRequiredDeep",
+        "source/paths.d.ts#Paths",
+        "source/paths.d.ts#_Paths",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SetReturnType",
+      "exportedName": "SetReturnType",
+      "status": "supported",
+      "source": "source/set-return-type.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SharedUnionFields",
+      "exportedName": "SharedUnionFields",
+      "status": "omitted",
+      "source": "source/shared-union-fields.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "SharedUnionFields",
+        "source/shared-union-fields.d.ts#SharedUnionFields",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SharedUnionFieldsDeep",
+      "exportedName": "SharedUnionFieldsDeep",
+      "status": "omitted",
+      "source": "source/shared-union-fields-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "SharedUnionFieldsDeep",
+        "source/shared-union-fields-deep.d.ts#SharedUnionFieldsDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SharedUnionFieldsDeepOptions",
+      "exportedName": "SharedUnionFieldsDeepOptions",
+      "status": "supported",
+      "source": "source/shared-union-fields-deep.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Simplify",
+      "exportedName": "Simplify",
+      "status": "supported",
+      "source": "source/simplify.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SimplifyDeep",
+      "exportedName": "SimplifyDeep",
+      "status": "omitted",
+      "source": "source/simplify-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "SimplifyDeep",
+        "source/simplify-deep.d.ts#SimplifyDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SingleKeyObject",
+      "exportedName": "SingleKeyObject",
+      "status": "supported",
+      "source": "source/single-key-object.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SnakeCase",
+      "exportedName": "SnakeCase",
+      "status": "supported",
+      "source": "source/snake-case.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SnakeCasedProperties",
+      "exportedName": "SnakeCasedProperties",
+      "status": "supported",
+      "source": "source/snake-cased-properties.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SnakeCasedPropertiesDeep",
+      "exportedName": "SnakeCasedPropertiesDeep",
+      "status": "omitted",
+      "source": "source/snake-cased-properties-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "SnakeCasedPropertiesDeep",
+        "source/snake-cased-properties-deep.d.ts#SnakeCasedPropertiesDeep",
+        "source/delimiter-cased-properties-deep.d.ts#DelimiterCasedPropertiesDeep",
+        "source/delimiter-cased-properties-deep.d.ts#_DelimiterCasedPropertiesDeep",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "SomeExtend",
+      "exportedName": "SomeExtend",
+      "status": "supported",
+      "source": "source/some-extend.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SomeExtendOptions",
+      "exportedName": "SomeExtendOptions",
+      "status": "supported",
+      "source": "source/some-extend.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Split",
+      "exportedName": "Split",
+      "status": "supported",
+      "source": "source/split.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SplitOnRestElement",
+      "exportedName": "SplitOnRestElement",
+      "status": "supported",
+      "source": "source/split-on-rest-element.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "SplitOptions",
+      "exportedName": "SplitOptions",
+      "status": "supported",
+      "source": "source/split.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Spread",
+      "exportedName": "Spread",
+      "status": "supported",
+      "source": "source/spread.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Stringified",
+      "exportedName": "Stringified",
+      "status": "supported",
+      "source": "source/stringified.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "StringLength",
+      "exportedName": "StringLength",
+      "status": "omitted",
+      "source": "source/string-length.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'StringToArray<S>'.",
+      "dependencyTrace": [
+        "StringLength",
+        "source/string-length.d.ts#StringLength"
+      ]
+    },
+    {
+      "name": "StringRepeat",
+      "exportedName": "StringRepeat",
+      "status": "supported",
+      "source": "source/string-repeat.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "StringSlice",
+      "exportedName": "StringSlice",
+      "status": "omitted",
+      "source": "source/string-slice.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'Array_[\"length\"]' does not satisfy the constraint 'number'.",
+      "dependencyTrace": [
+        "StringSlice",
+        "source/string-slice.d.ts#StringSlice",
+        "source/array-slice.d.ts#ArraySlice",
+        "source/array-slice.d.ts#_ArraySlice"
+      ]
+    },
+    {
+      "name": "StringToArray",
+      "exportedName": "StringToArray",
+      "status": "supported",
+      "source": "source/string-to-array.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "StringToArrayOptions",
+      "exportedName": "StringToArrayOptions",
+      "status": "supported",
+      "source": "source/string-to-array.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "StringToNumber",
+      "exportedName": "StringToNumber",
+      "status": "supported",
+      "source": "source/string-to-number.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "StructuredCloneable",
+      "exportedName": "StructuredCloneable",
+      "status": "omitted",
+      "source": "source/structured-cloneable.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'ArrayBuffer'.",
+      "dependencyTrace": [
+        "StructuredCloneable",
+        "source/structured-cloneable.d.ts#StructuredCloneable",
+        "source/structured-cloneable.d.ts#StructuredCloneableData"
+      ]
+    },
+    {
+      "name": "Subtract",
+      "exportedName": "Subtract",
+      "status": "omitted",
+      "source": "source/subtract.d.ts",
+      "adaptations": [],
+      "reason": "TS2344: Type 'SubtractPositives<Absolute<A>, Absolute<B>>' does not satisfy the constraint 'number'.   Type 'ReverseSign<SubtractIfAGreaterThanB<Absolute<B>, Absolute<A>>> | SubtractIfAGreaterThanB<Absolute<A>, Absolute<B>>' is not assignable to type 'number'.     Type 'SubtractIfAGreaterThanB<Absolute<A>, Absolute<B>>' is not assignable to type 'number'.       Type 'unknown' is not assignable to type 'number'.",
+      "dependencyTrace": [
+        "Subtract",
+        "source/subtract.d.ts#Subtract",
+        "source/subtract.d.ts#SubtractPostChecks"
+      ]
+    },
+    {
+      "name": "Sum",
+      "exportedName": "Sum",
+      "status": "omitted",
+      "source": "source/sum.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type '[...TupleOf<A>, ...TupleOf<B>]'.",
+      "dependencyTrace": [
+        "Sum",
+        "source/sum.d.ts#Sum",
+        "source/sum.d.ts#SumPostChecks",
+        "source/sum.d.ts#SumPositives"
+      ]
+    },
+    {
+      "name": "Tagged",
+      "exportedName": "Tagged",
+      "status": "adapted",
+      "source": "source/tagged.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "TaggedUnion",
+      "exportedName": "TaggedUnion",
+      "status": "supported",
+      "source": "source/tagged-union.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Trim",
+      "exportedName": "Trim",
+      "status": "supported",
+      "source": "source/trim.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "TsConfigJson",
+      "exportedName": "TsConfigJson",
+      "status": "supported",
+      "source": "source/tsconfig-json.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "TupleOf",
+      "exportedName": "TupleOf",
+      "status": "supported",
+      "source": "source/tuple-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "TupleToObject",
+      "exportedName": "TupleToObject",
+      "status": "omitted",
+      "source": "source/tuple-to-object.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'TArray'.",
+      "dependencyTrace": [
+        "TupleToObject",
+        "source/tuple-to-object.d.ts#TupleToObject",
+        "source/is-tuple.d.ts#IsTuple",
+        "source/is-tuple.d.ts#_IsTuple"
+      ]
+    },
+    {
+      "name": "TupleToUnion",
+      "exportedName": "TupleToUnion",
+      "status": "supported",
+      "source": "source/tuple-to-union.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "TypedArray",
+      "exportedName": "TypedArray",
+      "status": "omitted",
+      "source": "source/typed-array.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Int8Array'.",
+      "dependencyTrace": [
+        "TypedArray",
+        "source/typed-array.d.ts#TypedArray"
+      ]
+    },
+    {
+      "name": "UndefinedOnPartialDeep",
+      "exportedName": "UndefinedOnPartialDeep",
+      "status": "omitted",
+      "source": "source/undefined-on-partial-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "UndefinedOnPartialDeep",
+        "source/undefined-on-partial-deep.d.ts#UndefinedOnPartialDeep",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "UnionLength",
+      "exportedName": "UnionLength",
+      "status": "omitted",
+      "source": "source/union-length.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'UnionToTuple<Union>'.",
+      "dependencyTrace": [
+        "UnionLength",
+        "source/union-length.d.ts#UnionLength"
+      ]
+    },
+    {
+      "name": "UnionMax",
+      "exportedName": "UnionMax",
+      "status": "omitted",
+      "source": "source/union-max.d.ts",
+      "adaptations": [],
+      "reason": "TS2536: Type '\"length\"' cannot be used to index type 'Counter'.",
+      "dependencyTrace": [
+        "UnionMax",
+        "source/union-max.d.ts#UnionMax",
+        "source/union-max.d.ts#InternalUnionMax"
+      ]
+    },
+    {
+      "name": "UnionMember",
+      "exportedName": "UnionMember",
+      "status": "supported",
+      "source": "source/union-member.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnionToIntersection",
+      "exportedName": "UnionToIntersection",
+      "status": "supported",
+      "source": "source/union-to-intersection.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnionToTuple",
+      "exportedName": "UnionToTuple",
+      "status": "supported",
+      "source": "source/union-to-tuple.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnknownArray",
+      "exportedName": "UnknownArray",
+      "status": "supported",
+      "source": "source/unknown-array.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnknownMap",
+      "exportedName": "UnknownMap",
+      "status": "supported",
+      "source": "source/unknown-map.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnknownRecord",
+      "exportedName": "UnknownRecord",
+      "status": "adapted",
+      "source": "source/unknown-record.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "UnknownSet",
+      "exportedName": "UnknownSet",
+      "status": "supported",
+      "source": "source/unknown-set.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnwrapOpaque",
+      "exportedName": "UnwrapOpaque",
+      "status": "adapted",
+      "source": "source/tagged.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "UnwrapPartial",
+      "exportedName": "UnwrapPartial",
+      "status": "supported",
+      "source": "source/unwrap-partial.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "UnwrapRequired",
+      "exportedName": "UnwrapRequired",
+      "status": "omitted",
+      "source": "source/unwrap-required.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "UnwrapRequired",
+        "source/unwrap-required.d.ts#UnwrapRequired",
+        "source/internal/type.d.ts#NonRecursiveType",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "UnwrapTagged",
+      "exportedName": "UnwrapTagged",
+      "status": "adapted",
+      "source": "source/tagged.d.ts",
+      "adaptations": [
+        "property-key"
+      ]
+    },
+    {
+      "name": "UppercaseLetter",
+      "exportedName": "UppercaseLetter",
+      "status": "supported",
+      "source": "source/characters.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "ValueOf",
+      "exportedName": "ValueOf",
+      "status": "supported",
+      "source": "source/value-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Words",
+      "exportedName": "Words",
+      "status": "supported",
+      "source": "source/words.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "WordsOptions",
+      "exportedName": "WordsOptions",
+      "status": "supported",
+      "source": "source/words.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Writable",
+      "exportedName": "Writable",
+      "status": "supported",
+      "source": "source/writable.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "WritableDeep",
+      "exportedName": "WritableDeep",
+      "status": "omitted",
+      "source": "source/writable-deep.d.ts",
+      "adaptations": [],
+      "reason": "TS2304: Cannot find name 'Date'.",
+      "dependencyTrace": [
+        "WritableDeep",
+        "source/writable-deep.d.ts#WritableDeep",
+        "source/internal/type.d.ts#BuiltIns"
+      ]
+    },
+    {
+      "name": "WritableKeysOf",
+      "exportedName": "WritableKeysOf",
+      "status": "supported",
+      "source": "source/writable-keys-of.d.ts",
+      "adaptations": []
+    },
+    {
+      "name": "Xor",
+      "exportedName": "Xor",
+      "status": "supported",
+      "source": "source/xor.d.ts",
+      "adaptations": []
+    }
+  ],
+  "removed": [],
+  "unsupportedEntrypoints": {
+    "/globals": "Global augmentations alter the Roblox ambient environment"
+  }
+}
