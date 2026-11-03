@@ -27,6 +27,7 @@ function fixture() {
 		name: "@rbxts/type-fest",
 		version: "5.10.0",
 		types: "src/index.d.ts",
+		exports: { ".": { types: "./src/index.d.ts" } },
 		dependencies: {},
 	};
 	const lock = { version: manifest.version, packages: { "": { ...manifest } } };
@@ -104,26 +105,37 @@ test("replacement restores all generated paths after a partial copy failure", as
 			target = path.join(directory, "target");
 		for (const base of [stage, target]) {
 			await mkdir(path.join(base, "src"), { recursive: true });
-			for (const name of generatedFiles.filter((name) => name !== "src"))
+			for (const name of generatedFiles.filter((name) => name !== "src")) {
+				await mkdir(path.dirname(path.join(base, name)), { recursive: true });
 				await writeFile(path.join(base, name), base === stage ? "new" : "old");
+			}
 			await writeFile(
 				path.join(base, "src", base === stage ? "new.d.ts" : "old.d.ts"),
 				base === stage ? "new" : "old",
 			);
 		}
-		let copies = 0;
-		await assert.rejects(
-			replaceGenerated(stage, target, async (...args: Parameters<typeof cp>) => {
-				await cp(...args);
-				if (++copies === 3) throw Error("Simulated partial copy failure");
-			}),
-			/partial copy failure/,
-		);
-		for (const name of generatedFiles.filter((name) => name !== "src"))
-			assert.equal(await readFile(path.join(target, name), "utf8"), "old");
-		assert.deepEqual(await readdir(path.join(target, "src")), ["old.d.ts"]);
-		assert.deepEqual((await readdir(target)).sort(), [...generatedFiles].sort());
+		await mkdir(path.join(target, "docs/archive"), { recursive: true });
+		await writeFile(path.join(target, "docs/archive/notes.md"), "keep");
+		for (const failureAt of [3, generatedFiles.length]) {
+			let copies = 0;
+			await assert.rejects(
+				replaceGenerated(stage, target, async (...args: Parameters<typeof cp>) => {
+					await cp(...args);
+					if (++copies === failureAt) throw Error("Simulated partial copy failure");
+				}),
+				/partial copy failure/,
+			);
+			for (const name of generatedFiles.filter((name) => name !== "src"))
+				assert.equal(await readFile(path.join(target, name), "utf8"), "old");
+			assert.deepEqual(await readdir(path.join(target, "src")), ["old.d.ts"]);
+			assert.deepEqual(
+				(await readdir(target)).sort(),
+				[...new Set(generatedFiles.map((name) => name.split("/")[0]))].sort(),
+			);
+			assert.equal(await readFile(path.join(target, "docs/archive/notes.md"), "utf8"), "keep");
+		}
 		await replaceGenerated(stage, target);
 		assert.deepEqual(await readdir(path.join(target, "src")), ["new.d.ts"]);
 		assert.equal(await readFile(path.join(target, "package.json"), "utf8"), "new");
+		assert.equal(await readFile(path.join(target, "docs/archive/notes.md"), "utf8"), "keep");
 	}));

@@ -2,7 +2,7 @@
   "name": "@rbxts/type-fest",
   "version": "5.10.0",
   "packageManager": "npm@11.19.0",
-  "description": "Type-Fest utilities adapted and verified for roblox-ts",
+  "description": "Type-Fest types for roblox-ts",
   "scripts": {
     "sync": "tsx scripts/sync.ts",
     "verify": "tsc -p tsconfig.tools.json && tsx --test tests/*.test.ts && tsx scripts/verify.ts",
@@ -15,12 +15,15 @@
   "license": "MIT",
   "type": "commonjs",
   "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts"
+    }
+  },
   "files": [
     "src/**/*.d.ts",
-    "compatibility.json",
     "README.md",
-    "LICENSE",
-    "THIRD_PARTY_NOTICES.md"
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public",

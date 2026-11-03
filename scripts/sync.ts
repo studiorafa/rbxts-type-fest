@@ -123,24 +123,16 @@ export async function sync(version?: string, check = false, artifacts?: string):
 			);
 		await writeFile(path.join(stage, "compatibility.json"), JSON.stringify(report, null, 2) + "\n");
 		const readme = (await readFile(path.join(root, "README.md"), "utf8")).replaceAll("\r\n", "\n");
-		if (
-			readme.match(/<!-- coverage:start -->/g)?.length !== 1 ||
-			readme.match(/<!-- coverage:end -->/g)?.length !== 1
-		)
-			throw Error("README must contain exactly one generated coverage block");
-		await writeFile(
-			path.join(stage, "README.md"),
-			readme.replace(/<!-- coverage:start -->[\s\S]*?<!-- coverage:end -->/, coverage(report)),
-		);
+		await writeFile(path.join(stage, "README.md"), readme);
+		await mkdir(path.join(stage, "docs"));
+		await writeFile(path.join(stage, "docs/compatibility.md"), coverage(report));
+		const projectLicense = (await readFile(path.join(root, "LICENSE"), "utf8"))
+			.replaceAll("\r\n", "\n")
+			.split("\n\n---\n\nType-Fest\n")[0]
+			.trimEnd();
 		await writeFile(
 			path.join(stage, "LICENSE"),
-			(await readFile(path.join(root, "LICENSE"), "utf8")).replaceAll("\r\n", "\n"),
-		);
-		await writeFile(
-			path.join(stage, "THIRD_PARTY_NOTICES.md"),
-			"# Upstream declarations\n\nAdapted from type-fest " +
-				target +
-				" (https://github.com/sindresorhus/type-fest).\n\n" +
+			`${projectLicense}\n\n---\n\nType-Fest\nhttps://github.com/sindresorhus/type-fest/tree/v${target}\n\n` +
 				(await readFile(path.join(upstream, "license-mit"), "utf8")),
 		);
 		const packed = await verify(stage);

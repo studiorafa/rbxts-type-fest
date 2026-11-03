@@ -1,5 +1,5 @@
 import { execFileSync } from "node:child_process";
-import { cp, mkdtemp, readFile, rm } from "node:fs/promises";
+import { cp, mkdir, mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import semver from "semver";
@@ -80,14 +80,16 @@ export const generatedFiles = [
 	"compatibility.json",
 	"README.md",
 	"LICENSE",
-	"THIRD_PARTY_NOTICES.md",
+	"docs/compatibility.md",
 ];
 // Back up every fixed generated path before touching any of them. Keep the backup if restoration fails.
 export async function replaceGenerated(stage: string, directory = root, copy = cp): Promise<void> {
 	const base = path.resolve(directory);
 	const target = (name: string) => {
 		const resolved = path.resolve(base, name);
-		if (path.dirname(resolved) !== base) throw Error("Unsafe generated target");
+		const relative = path.relative(base, resolved);
+		if (!relative || relative.startsWith("..") || path.isAbsolute(relative))
+			throw Error("Unsafe generated target");
 		return resolved;
 	};
 	const backup = await mkdtemp(path.join(base, ".sync-backup-"));
@@ -107,6 +109,7 @@ export async function replaceGenerated(stage: string, directory = root, copy = c
 			for (const name of generatedFiles) {
 				touched.push(name);
 				await rm(target(name), { recursive: true, force: true });
+				await mkdir(path.dirname(target(name)), { recursive: true });
 				await copy(path.join(stage, name), target(name), { recursive: true });
 			}
 		} catch (error) {

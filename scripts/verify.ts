@@ -22,7 +22,7 @@ export function validateReport(
 	report: Report,
 	manifest: Record<string, unknown>,
 	lock: Record<string, unknown>,
-	readme: string,
+	compatibilityDoc: string,
 	actualExports: string[],
 ): void {
 	exactVersion(report.upstream.version);
@@ -31,6 +31,7 @@ export function validateReport(
 		manifest.name !== "@rbxts/type-fest" ||
 		manifest.version !== report.upstream.version ||
 		manifest.types !== "src/index.d.ts" ||
+		JSON.stringify(manifest.exports) !== JSON.stringify({ ".": { types: "./src/index.d.ts" } }) ||
 		"main" in manifest ||
 		"module" in manifest ||
 		"bin" in manifest
@@ -78,13 +79,8 @@ export function validateReport(
 		throw Error("Invalid API removal notice");
 	if (!report.unsupportedEntrypoints["/globals"])
 		throw Error("Missing unsupported globals entry point notice");
-	const normalized = readme.replaceAll("\r\n", "\n");
-	if (
-		normalized.match(/<!-- coverage:start -->/g)?.length !== 1 ||
-		normalized.match(/<!-- coverage:end -->/g)?.length !== 1 ||
-		normalized.match(/<!-- coverage:start -->[\s\S]*?<!-- coverage:end -->/)?.[0] !== coverage(report)
-	)
-		throw Error("README coverage disagrees with compatibility report");
+	if (compatibilityDoc.replaceAll("\r\n", "\n") !== coverage(report))
+		throw Error("Compatibility document disagrees with report");
 }
 
 export async function verify(directory = root): Promise<{ tarball: string; integrity: string }> {
@@ -101,12 +97,12 @@ export async function verify(directory = root): Promise<{ tarball: string; integ
 		report,
 		await json(path.join(directory, "package.json")),
 		await json(path.join(directory, "package-lock.json")),
-		await readFile(path.join(directory, "README.md"), "utf8"),
+		await readFile(path.join(directory, "docs/compatibility.md"), "utf8"),
 		actualExports,
 	);
-	const notice = await readFile(path.join(directory, "THIRD_PARTY_NOTICES.md"), "utf8");
+	const notice = await readFile(path.join(directory, "LICENSE"), "utf8");
 	if (
-		!notice.includes(`type-fest ${report.upstream.version}`) ||
+		!notice.includes(`/type-fest/tree/v${report.upstream.version}`) ||
 		!notice.includes("Copyright (c) Sindre Sorhus") ||
 		!notice.includes("Permission is hereby granted")
 	)
@@ -124,22 +120,11 @@ export async function verify(directory = root): Promise<{ tarball: string; integ
 		unpackedSize: number;
 	};
 	integrity(packed.integrity);
-	const required = [
-		"package.json",
-		"README.md",
-		"LICENSE",
-		"THIRD_PARTY_NOTICES.md",
-		"compatibility.json",
-		"src/index.d.ts",
-	];
+	const required = ["package.json", "README.md", "LICENSE", "src/index.d.ts"];
 	if (required.some((name) => !packed.files.some((file) => file.path === name)))
 		throw Error("Required package file missing");
 	for (const file of packed.files) {
-		if (
-			!/^(package\.json|README\.md|LICENSE|THIRD_PARTY_NOTICES\.md|compatibility\.json|src\/.*\.d\.ts)$/.test(
-				file.path,
-			)
-		)
+		if (!/^(package\.json|README\.md|LICENSE|src\/.*\.d\.ts)$/.test(file.path))
 			throw Error(`Unexpected package file: ${file.path}`);
 	}
 	const tarball = path.join(directory, packed.filename);
@@ -188,11 +173,15 @@ export async function verifyConsumer(
 		);
 		if (installedLock.packages["node_modules/@rbxts/type-fest"]?.integrity !== expectedIntegrity)
 			throw Error("Installed consumer artifact integrity differs from verified tarball");
-		const installedReport = await json<Report>(
-			path.join(consumer, "node_modules/@rbxts/type-fest/compatibility.json"),
+		const installedManifest = await json<{ name: string; version: string; types: string }>(
+			path.join(consumer, "node_modules/@rbxts/type-fest/package.json"),
 		);
-		if (JSON.stringify(installedReport) !== JSON.stringify(report))
-			throw Error("Installed compatibility report differs from verified artifact");
+		if (
+			installedManifest.name !== "@rbxts/type-fest" ||
+			installedManifest.version !== report.upstream.version ||
+			installedManifest.types !== "src/index.d.ts"
+		)
+			throw Error("Installed package identity differs from verified artifact");
 		await mkdir(path.join(consumer, "src"));
 		const imported = `import type {${names.join(",")}} from "@rbxts/type-fest";\n`;
 		await writeFile(
